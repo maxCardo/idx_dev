@@ -1,0 +1,60 @@
+/* HEADER */
+
+
+.header {
+    width: 100%;
+    padding: 20px 0;
+    background-color: transparent;
+    position: fixed;
+    @include topleft0;
+    z-index: 500;
+    @include transitionAll2ms;
+
+    img {
+        max-width: 330px;
+    }
+
+
+    .container {
+        @include flexAlignItemsCenter;
+        @include justifyContentSpaceBetween;
+        background-color: transparent;
+    }
+
+    &__links {
+        display: flex;
+        @include alignContentCenter;
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 10px;
+        color: black !important;
+        position: relative;
+        text-shadow: 1px 1px 3px rgba(0,0,0,.5);
+        @include transitionAll2ms;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
+
+        div {
+            display: inline-block;
+            position: absolute;
+            background: none repeat scroll 0 0 transparent;
+            left: 50%;
+            bottom: 0;
+            height: 2px;
+            background-color: #fff;
+            @include transitionAll2ms;
+            width: 0;
+        }
+
+        &:hover div {
+            width: 100%;
+            left: 0;
+        }
+    }
+
+}

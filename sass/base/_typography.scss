@@ -1,0 +1,301 @@
+// HEADINGS
+.strongLeadership,
+.testimonials,
+.approach {
+    &__heading {
+        @include heading;
+    }
+}
+
+// SECTION APPROACH 
+
+.approach {
+
+    &__box {
+        &--front {
+
+            h3 {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+                text-shadow: 4px 4px black;
+            }
+        }
+
+        &--back {
+            h3 {
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 25px;
+                line-height: 1.2;
+            }
+        }
+
+        &--front,
+        &--back {
+
+            h3 {
+                font-size: 40px;
+                font-weight: bold;
+            }
+
+
+        }
+    }
+
+
+}
+
+// SECTION TESTIMONIALS 
+
+.testimonials {
+
+
+    &__box {
+        p:first-of-type {
+            font-style: italic;
+            color: grey;
+        }
+    }
+}
+
+// SECTION HOME VALUATION
+.homeValuation,
+.rentalValuation {
+    text-align: center;
+
+    h2,
+    p {
+        margin-bottom: 10px;
+    }
+
+    p {
+        padding: 0 20px;
+    }
+
+}
+
+// MENU 
+
+.menu {
+    p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+}
+
+// SECTION HERO
+.hero {
+
+    &__paragraph,
+    &__heading,
+    &__link {
+        color: white;
+        position: absolute;
+        font-weight: bold;
+        left: 50%;
+        width: 100%;
+        text-align: center;
+    }
+
+    &__heading {
+        top: 50%;
+        width: 90%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__paragraph {
+        top: 68%;
+        text-transform: uppercase;
+        transform: translate(-50%, -68%);
+        font-size: 17px;
+    }
+
+    &__link {
+        top: 85%;
+        transform: translate(-50%, -85%);
+        display: inline-block;
+        @include transitionAll2ms;
+        font-size: 14px;
+
+        &:hover {
+            color: rgba(255, 255, 255, .8);
+        }
+
+    }
+}
+
+// SECTION ABOUT 
+
+.about {
+    .container {
+
+        h2,
+        p {
+            text-align: center;
+        }
+    }
+}
+
+// SECTION BGDARK IN CONTACT FORM
+.bgDark {
+    &__heading {
+        @include heading;
+        color: white;
+        font-weight: bold;
+        position: relative;
+        z-index: 999999999999999999999999999999999;
+    }
+
+    .close {
+        font-size: 35px;
+        position: absolute;
+        top: 30px;
+        right: 5%;
+        color: white;
+    }
+
+    &__box {
+        h5 {
+            margin-bottom: 40px;
+        }
+
+        a,
+        ul li a {
+            color: White;
+        }
+
+        ul {
+            li a {
+                margin: 10px;
+                padding: 15px 20px;
+                border-radius: 50%;
+                border: 1px solid white;
+                transition: all .4s ease-in-out;
+
+                &:hover {
+                    border-color: black;
+                    color: black;
+                }
+            }
+        }
+
+
+        p {
+            font-style: italic;
+
+            &:last-of-type {
+                margin-bottom: 40px;
+            }
+
+            &:nth-of-type(2) {
+                margin-bottom: 30px;
+            }
+        }
+
+
+
+    }
+}
+
+// MENU 
+.menu {
+    &__link {
+        color: black;
+        display: inline-block;
+        @include transitionAll2ms;
+
+        &:hover {
+            color: white;
+        }
+
+        &:last-of-type {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+// FOOTER 
+.footer {
+    &__box {
+
+        h3 {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid black;
+        }
+
+        li i,
+        li a,
+        h3,
+        span,
+        button {
+            color: black;
+            font-weight: bold;
+        }
+
+    }
+}
+
+@media only screen and (max-width:992px) {
+    .testimonials {
+        &__box {
+            text-align: center;
+
+            p {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .homeValuation,
+    .rentalValuation {
+        &__box {
+            p {
+                padding: 0;
+            }
+        }
+    }
+
+    .approach {
+
+        &__box {
+
+            p {
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .approach {
+        &__box {
+            h3 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 25px;
+                line-height: 1.4;
+            }
+        }
+    }
+
+}
+
+// TO MAKE TEXT IN LISTING SECTION TO BE BLOCK
+@media only screen and (max-width:500px) {
+    .p-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+        .none {
+            display: none;
+        }
+    }
+}
